@@ -1,0 +1,6 @@
+﻿COUT “Give me the first number:”
+CIN
+COUT “Give me the second number:”
+CIN
+MUL
+COUT

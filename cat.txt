@@ -1,0 +1,3 @@
+﻿COUT "Enter Text:"
+CIN
+COUT
