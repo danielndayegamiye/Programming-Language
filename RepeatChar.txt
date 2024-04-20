@@ -1,0 +1,5 @@
+COUT "Enter The Character to Repeat:"
+CIN
+COUT "Enter the number of times to be repeated:"
+CIN
+REPEAT
