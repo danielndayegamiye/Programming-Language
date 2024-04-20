@@ -11,7 +11,7 @@ public class Interpreter {
 		// TODO Auto-generated method stub
 		
 		try {
-			FileReader fileName = new FileReader("C:\\Mine\\Classes\\SPRING 2024\\CMSC 4513\\multiply.txt");
+			FileReader fileName = new FileReader("C:\\Mine\\Classes\\SPRING 2024\\CMSC 4513\\RepeatChar.txt");
 			BufferedReader buffer = new BufferedReader(fileName);
 			String line = "";
 			Stack<String> mystack = new Stack<String>();
@@ -72,6 +72,28 @@ public class Interpreter {
 				mystack.push(""+first*second);
 			}
 		}
+		else if (key.equals("REVERSE")) {
+			String ogString = mystack.pop();
+			String newString="";
+			for(int i = ogString.length()-1; i>=0; i--) {
+				newString = newString.concat(""+ogString.charAt(i));
+			}
+			System.out.println(newString);
+		}
+		else if(key.equals("REPEAT")) {
+			int times = Integer.parseInt(mystack.pop());
+			String character = mystack.pop();
+			if(character.length()>1)
+				System.out.println("that's not a character");
+			else {
+				String newString = "";
+				for(int i=0; i<times; i++)
+					newString = newString.concat(character);
+				System.out.println(newString);
+					
+			}
+		}
+		
 			
 	}
 }
